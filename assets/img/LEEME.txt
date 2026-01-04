@@ -1,0 +1,48 @@
+===========================================
+CARPETA DE IMÁGENES
+===========================================
+
+Coloca aquí las imágenes para cada sala del museo.
+
+ARCHIVOS SUGERIDOS:
+
+Sala 1 - Impacto:
+- sala1-producto-insignia.jpg
+
+Sala 2 - ADN Corporativo:
+- sala2-historia.jpg
+- sala2-sede.jpg
+- sala2-logo-evolucion.jpg
+
+Sala 3 - Proceso Administrativo:
+- sala3-proceso.jpg
+
+Sala 4 - Producción:
+- sala4-fabrica.jpg
+- sala4-linea-produccion.jpg
+- sala4-envasado.jpg
+
+Sala 5 - Talento Humano:
+- sala5-equipo.jpg
+
+Sala 6 - Finanzas:
+- sala6-finanzas.jpg
+
+Sala 7 - Marketing:
+- sala7-campanas.jpg
+- sala7-share-a-coke.jpg
+- sala7-publicidad.jpg
+
+Sala 8 - Innovación:
+- sala8-tecnologia.jpg
+
+===========================================
+NOTAS:
+- El museo funciona sin imágenes (usa placeholders)
+- Reemplaza las rutas en index.html con tus imágenes
+- Formato recomendado: JPG, PNG o WebP
+- Tamaño máximo recomendado: 2MB por imagen
+- Optimiza las imágenes antes de usarlas
+
+Para más información, consulta FRASES_IMPACTANTES.md
+

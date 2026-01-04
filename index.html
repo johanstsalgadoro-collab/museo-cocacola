@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo Digital Coca-Cola | Recorrido Interactivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Menú Principal / Mapa del Museo -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="IMAGENES/LOGO COCACOLA.webp" alt="Coca-Cola Logo" class="logo-header">
+                <h1 class="museum-title">Museo Digital Coca-Cola</h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menú de Salas (Mapa del Museo) -->
+    <section class="sala menu-principal" id="menuPrincipal">
+        <div class="sala-container">
+            <h2 class="sala-titulo">Mapa del Museo</h2>
+            <p class="sala-subtitulo">Selecciona una sala para comenzar tu recorrido</p>
+            
+            <div class="salas-grid">
+                <div class="sala-card" data-sala="1">
+                    <div class="sala-card-number">01</div>
+                    <h3>Sala de Impacto</h3>
+                    <p>La Obra Maestra de Coca-Cola</p>
+                </div>
+                <div class="sala-card" data-sala="2">
+                    <div class="sala-card-number">02</div>
+                    <h3>ADN Corporativo</h3>
+                    <p>Galería Histórica</p>
+                </div>
+                <div class="sala-card" data-sala="3">
+                    <div class="sala-card-number">03</div>
+                    <h3>Proceso Administrativo</h3>
+                    <p>La Máquina Administrativa</p>
+                </div>
+                <div class="sala-card" data-sala="4">
+                    <div class="sala-card-number">04</div>
+                    <h3>Producción / Servicio</h3>
+                    <p>La Fábrica de las Bebidas</p>
+                </div>
+                <div class="sala-card" data-sala="5">
+                    <div class="sala-card-number">05</div>
+                    <h3>Talento Humano</h3>
+                    <p>Galería del Talento</p>
+                </div>
+                <div class="sala-card" data-sala="6">
+                    <div class="sala-card-number">06</div>
+                    <h3>Finanzas</h3>
+                    <p>Sala del Dinero y Estrategia</p>
+                </div>
+                <div class="sala-card" data-sala="7">
+                    <div class="sala-card-number">07</div>
+                    <h3>Cliente y Marketing</h3>
+                    <p>Exposición Publicitaria</p>
+                </div>
+                <div class="sala-card" data-sala="8">
+                    <div class="sala-card-number">08</div>
+                    <h3>Innovación y Futuro</h3>
+                    <p>Zona Futurista</p>
+                </div>
+                <div class="sala-card" data-sala="9">
+                    <div class="sala-card-number">09</div>
+                    <h3>Trivia del Museo</h3>
+                    <p>Pon a prueba tus conocimientos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALA 1: SALA DE IMPACTO -->
+    <section class="sala" id="sala1">
+        <div class="sala-container">
+            <div class="sala-header">
+                <span class="sala-indicador">Sala 1 de 9</span>
+                <h2 class="sala-titulo">Sala de Impacto</h2>
+                <p class="sala-subtitulo">La Obra Maestra de Coca-Cola</p>
+            </div>
+
+            <div class="exhibicion-panel principal">
+                <div class="imagen-grande">
+                    <img src="IMAGENES/PRODUCTOS COCACOLA .png" alt="Productos Coca-Cola" class="img-placeholder">
+                </div>
+                <div class="frase-impactante">
+                    <blockquote>"Más de 1.9 mil millones de bebidas servidas diariamente en más de 200 países. Una marca que ha trascendido fronteras, culturas y generaciones."</blockquote>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Bienvenida al Museo Digital</h3>
+                <p>Te damos la bienvenida a un recorrido único por el universo corporativo de The Coca-Cola Company y Coca-Cola FEMSA. Este museo digital te llevará a través de los procesos funcionales, administrativos y estratégicos que han convertido a Coca-Cola en una de las marcas más reconocidas y valiosas del mundo. Prepárate para descubrir la maquinaria empresarial detrás de cada botella, cada campaña y cada innovación.</p>
+                <p>The Coca-Cola Company es una corporación multinacional estadounidense de bebidas fundada en 1886. Con más de 138 años de historia, la compañía ha evolucionado desde una pequeña farmacia en Atlanta hasta convertirse en una de las empresas más valiosas del mundo, con presencia en más de 200 países y territorios. Su portafolio incluye más de 500 marcas y 3,900 productos, desde bebidas gaseosas hasta aguas, jugos, tés y bebidas energéticas.</p>
+                <p>En Colombia, Coca-Cola FEMSA es el embotellador más grande de productos Coca-Cola en el mundo por volumen. Opera 9 plantas de producción en el país y emplea a más de 10,000 personas directamente, generando más de 50,000 empleos indirectos. La operación colombiana es un ejemplo de excelencia operativa y compromiso con el desarrollo sostenible de las comunidades donde opera.</p>
+            </div>
+
+            <div class="dato-curioso" id="datoCurioso1">
+                <button class="btn-curioso" onclick="mostrarDatoCurioso(1)">Dato Curioso</button>
+                <div class="curioso-contenido" id="curioso1">
+                    <p>La fórmula secreta de Coca-Cola está guardada en una bóveda en Atlanta, Georgia, y solo dos ejecutivos conocen la receta completa al mismo tiempo. La fórmula original fue creada por el Dr. John Stith Pemberton en 1886 y ha sido uno de los secretos comerciales mejor guardados de la historia empresarial.</p>
+                </div>
+            </div>
+
+            <div class="navegacion-sala">
+                <button class="btn-nav-sala" onclick="irAMenu()">
+                    <img src="IMAGENES/LOGO DEL BOTON MENU.webp" alt="Menú" class="btn-menu-icon">
+                    Menú Principal
+                </button>
+                <button class="btn-nav-sala" onclick="salaSiguiente(1)">Siguiente →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALA 2: ADN CORPORATIVO -->
+    <section class="sala" id="sala2">
+        <div class="sala-container">
+            <div class="sala-header">
+                <span class="sala-indicador">Sala 2 de 9</span>
+                <h2 class="sala-titulo">ADN Corporativo</h2>
+                <p class="sala-subtitulo">Galería Histórica</p>
+            </div>
+
+            <div class="exhibicion-panel">
+                <div class="logo-corporativo">
+                    <img src="IMAGENES/LOGO HISTORICO COCA COLA.jpg" alt="Logo Histórico Coca-Cola" class="logo-historia">
+                </div>
+                <h3>Información Corporativa</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Nombre Oficial</h4>
+                        <p>The Coca-Cola Company</p>
+                        <p class="info-detalle">Corporación multinacional estadounidense de bebidas, fundada el 8 de mayo de 1886. La compañía cotiza en la Bolsa de Nueva York (NYSE) bajo el símbolo "KO" y forma parte del índice Dow Jones Industrial Average desde 1991.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Año de Fundación</h4>
+                        <p>1886</p>
+                        <p class="info-detalle">El Dr. John Stith Pemberton creó la fórmula original en su farmacia en Atlanta. Asa Candler adquirió la fórmula en 1888 y fundó oficialmente The Coca-Cola Company en 1892, estableciendo las bases de lo que sería una de las empresas más exitosas del mundo.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Sede Principal</h4>
+                        <p>Atlanta, Georgia, Estados Unidos</p>
+                        <p class="info-detalle">El World of Coca-Cola, museo corporativo ubicado en Atlanta, recibe más de un millón de visitantes anuales. La sede corporativa en One Coca-Cola Plaza alberga a más de 5,000 empleados y es el centro neurálgico de las operaciones globales.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Operación en Colombia</h4>
+                        <p>Coca-Cola FEMSA</p>
+                        <p class="info-detalle">Coca-Cola FEMSA es el embotellador más grande del sistema Coca-Cola en el mundo. En Colombia opera desde 1940, cuenta con 9 plantas de producción, más de 200 centros de distribución y atiende a más de 1.2 millones de puntos de venta en todo el territorio nacional.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Clasificación Empresarial</h3>
+                <div class="clasificacion-grid">
+                    <div class="clasificacion-item">
+                        <strong>Sector:</strong> Bebidas y Alimentos
+                        <p>La compañía opera en el sector de bebidas no alcohólicas, siendo líder mundial en la categoría de refrescos carbonatados. Su portafolio incluye bebidas gaseosas, aguas, jugos, tés, cafés, bebidas deportivas y energéticas.</p>
+                    </div>
+                    <div class="clasificacion-item">
+                        <strong>Actividad Económica:</strong> Fabricación de bebidas gaseosas y refrescos
+                        <p>Actividades principales: desarrollo de fórmulas y concentrados, licenciamiento de marcas, marketing global, gestión de la cadena de suministro y desarrollo de nuevos productos. La producción física es realizada por socios embotelladores independientes.</p>
+                    </div>
+                    <div class="clasificacion-item">
+                        <strong>Tamaño:</strong> Multinacional (Grande)
+                        <p>Con más de 700,000 empleados en todo el mundo (incluyendo embotelladores), ingresos anuales superiores a $43 mil millones de dólares y presencia en más de 200 países. Es una de las 100 empresas más grandes del mundo por capitalización de mercado.</p>
+                    </div>
+                    <div class="clasificacion-item">
+                        <strong>Propiedad del Capital:</strong> Pública (NYSE: KO)
+                        <p>Cotiza en la Bolsa de Nueva York desde 1919. Warren Buffett, a través de Berkshire Hathaway, es uno de los principales accionistas con aproximadamente el 9% de las acciones. La compañía tiene más de 4.3 mil millones de acciones en circulación.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Línea del Tiempo</h3>
+                <div class="timeline">
+                    <div class="timeline-item" data-evento="1886">
+                        <div class="timeline-marker">1886</div>
+                        <div class="timeline-content">
+                            <h4>Creación de la Fórmula</h4>
+                            <p>Dr. John Stith Pemberton crea la fórmula original en Atlanta</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-evento="1892">
+                        <div class="timeline-marker">1892</div>
+                        <div class="timeline-content">
+                            <h4>Fundación de la Compañía</h4>
+                            <p>Asa Candler adquiere la fórmula y funda The Coca-Cola Company</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-evento="1915">
+                        <div class="timeline-marker">1915</div>
+                        <div class="timeline-content">
+                            <h4>Botella Contour</h4>
+                            <p>Se patenta la icónica botella de vidrio con forma de cintura</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-evento="1941">
+                        <div class="timeline-marker">1941</div>
+                        <div class="timeline-content">
+                            <h4>Expansión Global</h4>
+                            <p>Coca-Cola llega a más de 50 países durante la Segunda Guerra Mundial</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-evento="1985">
+                        <div class="timeline-marker">1985</div>
+                        <div class="timeline-content">
+                            <h4>New Coke</h4>
+                            <p>Lanzamiento y retiro de New Coke tras protestas masivas</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-evento="2010">
+                        <div class="timeline-marker">2010</div>
+                        <div class="timeline-content">
+                            <h4>Compromiso Sostenible</h4>
+                            <p>Lanzamiento de "World Without Waste" para reciclaje y sostenibilidad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para eventos del timeline -->
+            <div class="modal" id="modalTimeline">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="cerrarModal('modalTimeline')">&times;</span>
+                    <h3 id="modalTimelineTitulo"></h3>
+                    <p id="modalTimelineTexto"></p>
+                </div>
+            </div>
+
+            <div class="navegacion-sala">
+                <button class="btn-nav-sala" onclick="salaAnterior(2)">← Anterior</button>
+                <button class="btn-nav-sala" onclick="irAMenu()">
+                    <img src="IMAGENES/LOGO DEL BOTON MENU.webp" alt="Menú" class="btn-menu-icon">
+                    Menú
+                </button>
+                <button class="btn-nav-sala" onclick="salaSiguiente(2)">Siguiente →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALA 3: PROCESO ADMINISTRATIVO -->
+    <section class="sala" id="sala3">
+        <div class="sala-container">
+            <div class="sala-header">
+                <span class="sala-indicador">Sala 3 de 9</span>
+                <h2 class="sala-titulo">Proceso Administrativo</h2>
+                <p class="sala-subtitulo">La Máquina Administrativa</p>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Las Cuatro Funciones Administrativas</h3>
+                <p class="intro-texto">El proceso administrativo de Coca-Cola se estructura en cuatro funciones fundamentales que trabajan de forma integrada para garantizar la eficiencia y el cumplimiento de objetivos estratégicos.</p>
+            </div>
+
+            <div class="proceso-grid">
+                <div class="proceso-card" onclick="toggleAcordeon('planeacion')">
+                    <div class="proceso-icono">
+                        <img src="IMAGENES/PLANEACION.jpg" alt="Planeación" class="icono-proceso" onerror="this.style.display='none'">
+                    </div>
+                    <h3>Planeación</h3>
+                    <div class="proceso-contenido" id="planeacion">
+                        <p><strong>Aplicación en Coca-Cola:</strong> La compañía desarrolla planes estratégicos a largo plazo como "World Without Waste 2030", establece objetivos de crecimiento por región, planifica lanzamientos de productos y define presupuestos anuales. La planeación incluye análisis de mercado, proyecciones de demanda y estrategias de expansión.</p>
+                        <p>El proceso de planeación en Coca-Cola es integral y multinivel. A nivel corporativo, se establecen objetivos estratégicos globales como alcanzar la neutralidad de carbono para 2040 y hacer que todos los envases sean 100% reciclables para 2025. A nivel regional, cada unidad de negocio desarrolla planes operativos anuales que incluyen objetivos de ventas, expansión de mercado y lanzamiento de productos locales. La planeación también contempla análisis de tendencias de consumo, evaluación de competencia y proyecciones financieras a 5 y 10 años.</p>
+                        <p>La metodología de planeación incluye sesiones estratégicas trimestrales, uso de herramientas de business intelligence para análisis predictivo, y la participación de stakeholders clave en la definición de objetivos. Los planes se revisan y ajustan continuamente basándose en métricas de desempeño y cambios en el entorno de negocio.</p>
+                    </div>
+                </div>
+
+                <div class="proceso-card" onclick="toggleAcordeon('organizacion')">
+                    <div class="proceso-icono">
+                        <img src="IMAGENES/ORGANIZACION.jpg" alt="Organización" class="icono-proceso" onerror="this.style.display='none'">
+                    </div>
+                    <h3>Organización</h3>
+                    <div class="proceso-contenido" id="organizacion">
+                        <p><strong>Aplicación en Coca-Cola:</strong> La estructura organizacional se divide en unidades de negocio por región (América del Norte, América Latina, Europa, África, Asia), cada una con sus propios equipos de marketing, producción y distribución. Se establecen jerarquías claras, se asignan responsabilidades y se coordinan recursos humanos y materiales.</p>
+                        <p>La estructura organizacional de Coca-Cola sigue un modelo híbrido que combina organización geográfica con funciones globales. Cada región tiene autonomía operativa pero se alinea con estrategias globales. La organización incluye departamentos funcionales como Marketing Global, Investigación y Desarrollo, Recursos Humanos, Finanzas y Operaciones, cada uno con responsabilidades específicas pero interconectadas.</p>
+                        <p>El sistema de organización también contempla la gestión de la cadena de suministro, que coordina con más de 250 socios embotelladores independientes en todo el mundo. Esta estructura permite escalabilidad, adaptación local y eficiencia global. La organización se apoya en tecnologías de colaboración, sistemas ERP integrados y procesos estandarizados que garantizan consistencia en la calidad y servicio en todas las operaciones.</p>
+                    </div>
+                </div>
+
+                <div class="proceso-card" onclick="toggleAcordeon('direccion')">
+                    <div class="proceso-icono">
+                        <img src="IMAGENES/DIRECCION.jpg" alt="Dirección" class="icono-proceso" onerror="this.style.display='none'">
+                    </div>
+                    <h3>Dirección</h3>
+                    <div class="proceso-contenido" id="direccion">
+                        <p><strong>Aplicación en Coca-Cola:</strong> Los líderes de la compañía motivan a los equipos mediante programas de reconocimiento, establecen comunicación clara de objetivos, toman decisiones estratégicas sobre inversiones y alianzas, y lideran iniciativas de cambio organizacional como la transformación digital y la sostenibilidad.</p>
+                        <p>El liderazgo en Coca-Cola se basa en valores corporativos como integridad, pasión, diversidad e inclusión, y responsabilidad. Los directivos implementan programas de desarrollo de liderazgo, comunicación bidireccional con empleados, y establecen una visión clara que inspira a los equipos. La dirección también incluye la toma de decisiones estratégicas sobre inversiones multimillonarias, alianzas con socios comerciales, y la gestión de crisis y oportunidades de mercado.</p>
+                        <p>Los líderes de Coca-Cola participan activamente en iniciativas de sostenibilidad, visitan plantas y mercados regularmente, y mantienen comunicación directa con empleados a través de town halls, encuestas de clima y programas de feedback. La dirección también implica la gestión del cambio organizacional, especialmente en la transformación digital, donde se lidera la adopción de nuevas tecnologías y metodologías ágiles de trabajo.</p>
+                    </div>
+                </div>
+
+                <div class="proceso-card" onclick="toggleAcordeon('control')">
+                    <div class="proceso-icono">
+                        <img src="IMAGENES/CONTROL.jpg" alt="Control" class="icono-proceso" onerror="this.style.display='none'">
+                    </div>
+                    <h3>Control</h3>
+                    <div class="proceso-contenido" id="control">
+                        <p><strong>Aplicación en Coca-Cola:</strong> Se implementan sistemas de control de calidad en producción, monitoreo de ventas en tiempo real, auditorías de cumplimiento normativo, evaluación de desempeño de empleados y análisis de indicadores financieros. Se realizan ajustes continuos basados en métricas de rendimiento.</p>
+                        <p>El sistema de control en Coca-Cola es exhaustivo y abarca múltiples dimensiones. En producción, se implementan controles de calidad en cada etapa del proceso, desde la recepción de materias primas hasta el producto final. Se realizan más de 200 pruebas de calidad diarias en cada planta, incluyendo análisis microbiológicos, pruebas de sabor, verificación de presión de gas y pruebas de hermeticidad.</p>
+                        <p>El control financiero incluye reportes consolidados en tiempo real, auditorías internas y externas, y análisis de indicadores clave de desempeño (KPIs) como margen de utilidad, retorno sobre inversión, y eficiencia operativa. El control también se extiende al cumplimiento normativo en más de 200 países, gestión de riesgos, y monitoreo de la cadena de suministro para garantizar estándares éticos y de calidad en todos los niveles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Interacción entre las Funciones</h3>
+                <div class="diagrama-proceso">
+                    <div class="diagrama-item">Planeación</div>
+                    <div class="diagrama-flecha">→</div>
+                    <div class="diagrama-item">Organización</div>
+                    <div class="diagrama-flecha">→</div>
+                    <div class="diagrama-item">Dirección</div>
+                    <div class="diagrama-flecha">→</div>
+                    <div class="diagrama-item">Control</div>
+                    <div class="diagrama-flecha ciclo">↻</div>
+                </div>
+                <p class="diagrama-texto">El proceso es cíclico: el control retroalimenta la planeación para ajustes continuos.</p>
+            </div>
+
+            <div class="navegacion-sala">
+                <button class="btn-nav-sala" onclick="salaAnterior(3)">← Anterior</button>
+                <button class="btn-nav-sala" onclick="irAMenu()">
+                    <img src="IMAGENES/LOGO DEL BOTON MENU.webp" alt="Menú" class="btn-menu-icon">
+                    Menú
+                </button>
+                <button class="btn-nav-sala" onclick="salaSiguiente(3)">Siguiente →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALA 4: PRODUCCIÓN / SERVICIO -->
+    <section class="sala" id="sala4">
+        <div class="sala-container">
+            <div class="sala-header">
+                <span class="sala-indicador">Sala 4 de 9</span>
+                <h2 class="sala-titulo">Producción / Servicio</h2>
+                <p class="sala-subtitulo">La Fábrica de las Bebidas</p>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Flujo del Proceso Productivo</h3>
+                <div class="flujograma-grid">
+                    <div class="flujo-paso" onclick="mostrarDetalleFlujo(1)">
+                        <div class="flujo-numero">1</div>
+                        <h4>Entradas</h4>
+                        <p>Agua, azúcar, concentrado, envases, etiquetas</p>
+                    </div>
+                    <div class="flujo-paso" onclick="mostrarDetalleFlujo(2)">
+                        <div class="flujo-numero">2</div>
+                        <h4>Procesamiento</h4>
+                        <p>Mezcla, carbonatación, envasado, etiquetado</p>
+                    </div>
+                    <div class="flujo-paso" onclick="mostrarDetalleFlujo(3)">
+                        <div class="flujo-numero">3</div>
+                        <h4>Control de Calidad</h4>
+                        <p>Inspección, pruebas de sabor, verificación</p>
+                    </div>
+                    <div class="flujo-paso" onclick="mostrarDetalleFlujo(4)">
+                        <div class="flujo-numero">4</div>
+                        <h4>Embalaje</h4>
+                        <p>Empaque en cajas, paletizado</p>
+                    </div>
+                    <div class="flujo-paso" onclick="mostrarDetalleFlujo(5)">
+                        <div class="flujo-numero">5</div>
+                        <h4>Distribución</h4>
+                        <p>Almacenamiento, transporte, entrega</p>
+                    </div>
+                    <div class="flujo-paso" onclick="mostrarDetalleFlujo(6)">
+                        <div class="flujo-numero">6</div>
+                        <h4>Salidas</h4>
+                        <p>Productos terminados en puntos de venta</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para detalles del flujo -->
+            <div class="modal" id="modalFlujo">
+                <div class="modal-content modal-flujo">
+                    <span class="modal-close" onclick="cerrarModal('modalFlujo')">&times;</span>
+                    <h3 id="modalFlujoTitulo"></h3>
+                    <div id="modalFlujoContenido"></div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Indicadores Clave</h3>
+                <div class="indicadores-grid">
+                    <div class="indicador-card">
+                        <h4>Capacidad de Producción</h4>
+                        <p class="indicador-valor">+2,000 millones de unidades/año</p>
+                    </div>
+                    <div class="indicador-card">
+                        <h4>Tiempo de Ciclo</h4>
+                        <p class="indicador-valor">15-20 minutos por lote</p>
+                    </div>
+                    <div class="indicador-card">
+                        <h4>Eficiencia de Línea</h4>
+                        <p class="indicador-valor">95%+ de disponibilidad</p>
+                    </div>
+                    <div class="indicador-card">
+                        <h4>Tasa de Defectos</h4>
+                        <p class="indicador-valor">< 0.1%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Proceso Productivo Detallado</h3>
+                <p>El proceso productivo de Coca-Cola es altamente estandarizado y eficiente. Comienza con la recepción y control de calidad de materias primas: agua purificada que cumple con estándares internacionales, azúcar refinada, concentrado de Coca-Cola (fórmula secreta), dióxido de carbono de grado alimentario, y envases (PET, vidrio, aluminio). El agua pasa por un proceso de purificación de múltiples etapas que incluye filtración, ósmosis inversa y esterilización UV.</p>
+                <p>La mezcla se realiza en tanques de acero inoxidable donde se combinan los ingredientes según fórmulas precisas. El proceso de carbonatación inyecta CO2 a presión específica para lograr el nivel de efervescencia característico. El envasado se realiza en líneas de alta velocidad que pueden producir hasta 2,000 botellas por minuto, con sistemas automatizados de llenado, tapado y etiquetado.</p>
+                <p>El control de calidad es continuo: se toman muestras cada 15 minutos para análisis de sabor, pH, contenido de azúcar, presión de gas y pruebas microbiológicas. Los productos que no cumplen estándares son rechazados automáticamente. El embalaje final incluye agrupación en cajas de cartón reciclado, paletizado automatizado y almacenamiento en cámaras frigoríficas cuando es necesario.</p>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Problemas Identificados y Mejoras Posibles</h3>
+                <div class="mejoras-grid">
+                    <div class="mejora-card" onclick="toggleMejora('mejora1')">
+                        <h4>Optimización de Agua</h4>
+                        <div class="mejora-contenido" id="mejora1">
+                            <p><strong>Problema:</strong> Alto consumo de agua en el proceso productivo. Se estima que se requieren aproximadamente 2.5 litros de agua para producir 1 litro de bebida, considerando limpieza de equipos y procesos auxiliares.</p>
+                            <p><strong>Mejora:</strong> Implementar sistemas de recirculación y tratamiento de agua, reducir el ratio agua/producto mediante tecnología de filtración avanzada. Coca-Cola ya ha logrado reducir el consumo de agua en un 20% desde 2010 mediante mejoras en procesos y tecnologías de reutilización. El objetivo es alcanzar un ratio de 1.5:1 para 2030.</p>
+                            <p><strong>Impacto:</strong> Reducción del consumo de agua en millones de litros anuales, menor impacto en recursos hídricos locales, y reducción de costos operativos. En Colombia, Coca-Cola FEMSA ha implementado sistemas de tratamiento de aguas residuales que permiten reutilizar el 100% del agua de proceso en actividades no productivas.</p>
+                        </div>
+                    </div>
+                    <div class="mejora-card" onclick="toggleMejora('mejora2')">
+                        <h4>Envases Sostenibles</h4>
+                        <div class="mejora-contenido" id="mejora2">
+                            <p><strong>Problema:</strong> Dependencia de plástico PET y emisiones de carbono asociadas a la producción de envases. Aunque el PET es reciclable, solo el 30% se recicla globalmente, generando residuos plásticos.</p>
+                            <p><strong>Mejora:</strong> Aumentar el uso de envases reciclados (rPET), desarrollar botellas de papel y promover el retorno de envases mediante incentivos. Coca-Cola se ha comprometido a que para 2025, el 50% de sus envases PET contengan material reciclado, y para 2030, recolectar y reciclar el equivalente a cada botella o lata vendida.</p>
+                            <p><strong>Impacto:</strong> Reducción de la huella de carbono en un 25%, disminución de residuos plásticos en océanos y vertederos, y creación de economía circular. En Colombia, se han lanzado programas de recolección de envases con incentivos económicos para recicladores, y se están probando botellas hechas 100% de rPET.</p>
+                        </div>
+                    </div>
+                    <div class="mejora-card" onclick="toggleMejora('mejora3')">
+                        <h4>Eficiencia Energética</h4>
+                        <div class="mejora-contenido" id="mejora3">
+                            <p><strong>Problema:</strong> Alto consumo energético en plantas de producción. Las operaciones de envasado, refrigeración y transporte requieren grandes cantidades de energía, principalmente de fuentes no renovables.</p>
+                            <p><strong>Mejora:</strong> Instalar paneles solares, optimizar maquinaria con motores de alta eficiencia y utilizar energía renovable en al menos el 50% de las operaciones. Coca-Cola se ha comprometido a usar 100% de energía renovable en sus operaciones para 2030 y alcanzar neutralidad de carbono para 2040.</p>
+                            <p><strong>Impacto:</strong> Reducción de emisiones de CO2 en millones de toneladas anuales, menores costos operativos a largo plazo, y liderazgo en sostenibilidad corporativa. Varias plantas en Colombia ya utilizan energía solar y eólica, y se están implementando sistemas de gestión energética inteligente que optimizan el consumo en tiempo real.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navegacion-sala">
+                <button class="btn-nav-sala" onclick="salaAnterior(4)">← Anterior</button>
+                <button class="btn-nav-sala" onclick="irAMenu()">
+                    <img src="IMAGENES/LOGO DEL BOTON MENU.webp" alt="Menú" class="btn-menu-icon">
+                    Menú
+                </button>
+                <button class="btn-nav-sala" onclick="salaSiguiente(4)">Siguiente →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALA 5: TALENTO HUMANO -->
+    <section class="sala" id="sala5">
+        <div class="sala-container">
+            <div class="sala-header">
+                <span class="sala-indicador">Sala 5 de 9</span>
+                <h2 class="sala-titulo">Talento Humano</h2>
+                <p class="sala-subtitulo">Galería del Talento</p>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Procesos de Gestión de Talento</h3>
+                <div class="talento-grid">
+                    <div class="talento-card-flip" onclick="mostrarDetalleTalento('reclutamiento')">
+                        <div class="talento-card-inner">
+                            <div class="talento-card-front">
+                                <h4>Reclutamiento</h4>
+                            </div>
+                            <div class="talento-card-back">
+                                <p>Búsqueda activa de talento mediante portales de empleo, universidades, redes sociales profesionales y programas de referidos internos. Coca-Cola busca perfiles diversos y alineados con sus valores corporativos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="talento-card-flip" onclick="mostrarDetalleTalento('seleccion')">
+                        <div class="talento-card-inner">
+                            <div class="talento-card-front">
+                                <h4>Selección</h4>
+                            </div>
+                            <div class="talento-card-back">
+                                <p>Proceso de selección que incluye pruebas técnicas, entrevistas por competencias, evaluación de valores y fit cultural. Se prioriza la diversidad e inclusión en todos los niveles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="talento-card-flip" onclick="mostrarDetalleTalento('formacion')">
+                        <div class="talento-card-inner">
+                            <div class="talento-card-front">
+                                <h4>Formación</h4>
+                            </div>
+                            <div class="talento-card-back">
+                                <p>Programas de capacitación continua, desarrollo de liderazgo, cursos en línea, mentorías y oportunidades de crecimiento interno. Inversión en educación y certificaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="talento-card-flip" onclick="mostrarDetalleTalento('evaluacion')">
+                        <div class="talento-card-inner">
+                            <div class="talento-card-front">
+                                <h4>Evaluación</h4>
+                            </div>
+                            <div class="talento-card-back">
+                                <p>Sistema de evaluación de desempeño anual, feedback 360°, establecimiento de objetivos SMART y planes de desarrollo individual (IDP). Reconocimiento y recompensas por logros.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="talento-card-flip" onclick="mostrarDetalleTalento('bienestar')">
+                        <div class="talento-card-inner">
+                            <div class="talento-card-front">
+                                <h4>Bienestar</h4>
+                            </div>
+                            <div class="talento-card-back">
+                                <p>Programas de salud física y mental, beneficios flexibles, equilibrio trabajo-vida, actividades recreativas, seguro médico y apoyo psicológico. Cultura de bienestar integral.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Desafíos del Talento Humano</h3>
+                <div class="desafios-grid">
+                    <div class="desafio-card">
+                        <h4>Rotación de Personal</h4>
+                        <p>Gestión de la rotación voluntaria e involuntaria, especialmente en roles operativos. Estrategias de retención mediante desarrollo de carrera y compensación competitiva.</p>
+                        <p>La rotación de personal es un desafío constante, especialmente en plantas de producción donde la tasa puede alcanzar el 15-20% anual. Las causas principales incluyen oportunidades en otras empresas, condiciones de trabajo físicamente demandantes, y falta de oportunidades de crecimiento. Coca-Cola implementa estrategias de retención que incluyen programas de desarrollo de carrera, planes de sucesión, aumento de salarios competitivos, mejoras en condiciones de trabajo, y programas de reconocimiento. Se realizan encuestas de salida para entender las razones de la rotación y se implementan acciones correctivas.</p>
+                    </div>
+                    <div class="desafio-card">
+                        <h4>Clima Laboral</h4>
+                        <p>Mantener un ambiente positivo y colaborativo en plantas y oficinas. Encuestas de clima, programas de reconocimiento y comunicación abierta.</p>
+                        <p>Un clima laboral positivo es esencial para la productividad y retención. Coca-Cola realiza encuestas de clima anuales que miden satisfacción, compromiso, comunicación, y percepción de liderazgo. Los resultados se comparten con todos los empleados y se desarrollan planes de acción para áreas de mejora. Se promueve la comunicación abierta mediante town halls, sesiones de feedback, y canales de comunicación directa con la alta dirección. Los programas de reconocimiento incluyen celebraciones de logros, eventos de equipo, y reconocimiento público. Se fomenta la diversidad e inclusión mediante grupos de recursos para empleados (ERGs) y políticas de no discriminación.</p>
+                    </div>
+                    <div class="desafio-card">
+                        <h4>Seguridad Industrial</h4>
+                        <p>Prevención de accidentes en plantas de producción. Capacitación constante, equipos de protección personal (EPP) y protocolos de seguridad estrictos.</p>
+                        <p>La seguridad industrial es una prioridad absoluta. Coca-Cola tiene un índice de frecuencia de accidentes (IFA) objetivo de menos de 0.5 por cada millón de horas trabajadas. Se implementan programas de seguridad que incluyen capacitación continua en seguridad, inspecciones regulares de equipos, uso obligatorio de EPP, protocolos de bloqueo y etiquetado, y simulacros de emergencia. Se realizan análisis de riesgos para cada proceso y se implementan controles preventivos. Los empleados son entrenados para identificar y reportar riesgos potenciales. Se mantienen registros detallados de incidentes y se realizan investigaciones para prevenir recurrencias. En Colombia, las plantas de Coca-Cola FEMSA tienen certificaciones en seguridad y salud ocupacional.</p>
+                    </div>
+                    <div class="desafio-card">
+                        <h4>Automatización</h4>
+                        <p>Adaptación de la fuerza laboral a la automatización. Reentrenamiento de empleados, transición a roles más estratégicos y gestión del cambio.</p>
+                        <p>La automatización está transformando las operaciones, especialmente en plantas de producción. Se están implementando robots para tareas repetitivas, sistemas de envasado automatizado, y gestión de inventario inteligente. Esto requiere reentrenamiento de empleados para operar y mantener nueva tecnología. Coca-Cola invierte en programas de capacitación técnica, certificaciones en automatización, y transición de empleados a roles más estratégicos como supervisión, mantenimiento, y análisis de datos. Se implementan programas de gestión del cambio que incluyen comunicación transparente sobre cambios, participación de empleados en el diseño de nuevos procesos, y apoyo durante la transición. El objetivo es que la automatización complemente el trabajo humano, no lo reemplace completamente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Un Día en la Vida de un Colaborador</h3>
+                <button class="btn-rol" onclick="mostrarRol('gerente')">Ver Rol: Gerente de Marketing</button>
+                <div class="rol-contenido" id="rolGerente">
+                    <h4>Gerente de Marketing - Un Día Típico</h4>
+                    <ul>
+                        <li><strong>8:00 AM:</strong> Revisión de métricas de campañas en curso y análisis de competencia</li>
+                        <li><strong>9:30 AM:</strong> Reunión con equipo creativo para lanzamiento de nuevo producto</li>
+                        <li><strong>11:00 AM:</strong> Presentación de estrategia digital a directivos</li>
+                        <li><strong>2:00 PM:</strong> Análisis de datos de consumidor y ajustes de segmentación</li>
+                        <li><strong>4:00 PM:</strong> Coordinación con agencias externas y aprobación de materiales</li>
+                        <li><strong>5:30 PM:</strong> Revisión de presupuesto y planificación de próximas campañas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Modal para detalles de procesos de talento -->
+            <div class="modal" id="modalTalento">
+                <div class="modal-content modal-talento">
+                    <span class="modal-close" onclick="cerrarModal('modalTalento')">&times;</span>
+                    <h3 id="modalTalentoTitulo"></h3>
+                    <div id="modalTalentoContenido"></div>
+                </div>
+            </div>
+
+            <div class="navegacion-sala">
+                <button class="btn-nav-sala" onclick="salaAnterior(5)">← Anterior</button>
+                <button class="btn-nav-sala" onclick="irAMenu()">
+                    <img src="IMAGENES/LOGO DEL BOTON MENU.webp" alt="Menú" class="btn-menu-icon">
+                    Menú
+                </button>
+                <button class="btn-nav-sala" onclick="salaSiguiente(5)">Siguiente →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALA 6: FINANZAS -->
+    <section class="sala" id="sala6">
+        <div class="sala-container">
+            <div class="sala-header">
+                <span class="sala-indicador">Sala 6 de 9</span>
+                <h2 class="sala-titulo">Finanzas</h2>
+                <p class="sala-subtitulo">Sala del Dinero y Estrategia</p>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Estructura Financiera</h3>
+                <div class="finanzas-grid">
+                    <div class="finanza-card">
+                        <h4>Ingresos</h4>
+                        <p class="finanza-valor">~$43 mil millones USD (2023)</p>
+                        <p>Ventas de bebidas, licencias de marca, ingresos por franquicias</p>
+                        <p class="finanza-detalle">Los ingresos provienen principalmente de la venta de concentrados y jarabes a embotelladores (aproximadamente 60%), venta de productos terminados en mercados donde opera directamente (25%), y licencias de marca y otros ingresos (15%). El modelo de negocio se basa en la venta de concentrados a embotelladores independientes que producen, distribuyen y venden los productos finales. En 2023, los ingresos crecieron un 6% respecto al año anterior, impulsados por aumentos de precio y crecimiento de volumen en mercados emergentes.</p>
+                    </div>
+                    <div class="finanza-card">
+                        <h4>Egresos</h4>
+                        <p class="finanza-valor">~$35 mil millones USD</p>
+                        <p>Costos de producción, marketing, distribución, administración</p>
+                        <p class="finanza-detalle">Los egresos incluyen costos de materias primas (azúcar, agua, concentrados, envases) que representan aproximadamente el 35% de los ingresos, costos de marketing y publicidad (25%), costos de distribución y logística (15%), gastos administrativos y de personal (15%), y otros gastos operativos (10%). La compañía invierte fuertemente en marketing, con un presupuesto anual de más de $4 mil millones en publicidad global. Los costos de distribución incluyen transporte, almacenamiento, y gestión de la cadena de suministro con más de 250 socios embotelladores.</p>
+                    </div>
+                    <div class="finanza-card">
+                        <h4>Flujo de Caja</h4>
+                        <p class="finanza-valor">~$11 mil millones USD</p>
+                        <p>Flujo de caja operativo positivo, inversiones en crecimiento</p>
+                        <p class="finanza-detalle">El flujo de caja operativo es fuerte y consistente, permitiendo a la compañía financiar inversiones en crecimiento, pagar dividendos a accionistas, y mantener una posición financiera sólida. En 2023, el flujo de caja libre (después de inversiones de capital) fue de aproximadamente $9.5 mil millones. La compañía tiene una política de dividendos que ha aumentado por 61 años consecutivos, siendo una de las acciones más confiables para inversores que buscan ingresos por dividendos. El flujo de caja se utiliza para inversiones en nuevas plantas, tecnología, adquisiciones estratégicas, y programas de sostenibilidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Indicadores Financieros Clave</h3>
+                <div class="indicadores-financieros">
+                    <div class="indicador-financiero">
+                        <h4>Margen de Utilidad Neta</h4>
+                        <div class="barra-grafico">
+                            <div class="barra-fill" style="width: 22%">22%</div>
+                        </div>
+                    </div>
+                    <div class="indicador-financiero">
+                        <h4>ROE (Retorno sobre Patrimonio)</h4>
+                        <div class="barra-grafico">
+                            <div class="barra-fill" style="width: 42%">42%</div>
+                        </div>
+                    </div>
+                    <div class="indicador-financiero">
+                        <h4>ROA (Retorno sobre Activos)</h4>
+                        <div class="barra-grafico">
+                            <div class="barra-fill" style="width: 10%">10%</div>
+                        </div>
+                    </div>
+                    <div class="indicador-financiero">
+                        <h4>Ratio de Liquidez</h4>
+                        <div class="barra-grafico">
+                            <div class="barra-fill" style="width: 85%">0.85</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Costos Relevantes</h3>
+                <table class="tabla-financiera">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Costo</th>
+                            <th>Descripción</th>
+                            <th>% del Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Costos de Producción</td>
+                            <td>Materias primas, mano de obra, energía</td>
+                            <td>45%</td>
+                        </tr>
+                        <tr>
+                            <td>Marketing y Publicidad</td>
+                            <td>Campañas, sponsorships, medios</td>
+                            <td>25%</td>
+                        </tr>
+                        <tr>
+                            <td>Distribución</td>
+                            <td>Transporte, almacenamiento, logística</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>Administración</td>
+                            <td>Gastos generales, tecnología, personal</td>
+                            <td>15%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Herramientas Tecnológicas Financieras</h3>
+                <div class="herramientas-grid">
+                    <div class="herramienta-card">
+                        <h4>ERP SAP</h4>
+                        <p>Sistema integrado para gestión financiera, contabilidad, control de costos y reportes consolidados.</p>
+                        <p>Coca-Cola utiliza SAP ERP como sistema central de gestión empresarial. El sistema integra todas las funciones financieras incluyendo contabilidad general, cuentas por pagar y por cobrar, gestión de activos, control de costos, y reportes financieros consolidados. SAP permite la consolidación de información financiera de más de 200 países en tiempo real, facilitando el cierre mensual y anual. El sistema también gestiona la cadena de suministro, recursos humanos, y ventas, proporcionando una visión integral del negocio. Se realizan actualizaciones y mejoras continuas del sistema para mantenerlo alineado con las necesidades del negocio y regulaciones locales.</p>
+                    </div>
+                    <div class="herramienta-card">
+                        <h4>Dashboards BI</h4>
+                        <p>Plataformas de Business Intelligence para visualización de métricas financieras en tiempo real.</p>
+                        <p>Se utilizan plataformas de Business Intelligence como Tableau, Power BI, y herramientas propietarias para crear dashboards ejecutivos que muestran métricas financieras clave en tiempo real. Los dashboards incluyen indicadores como ingresos por región, márgenes de utilidad, flujo de caja, gastos por categoría, y comparativas con presupuesto y años anteriores. Los ejecutivos pueden acceder a estos dashboards desde dispositivos móviles, permitiendo toma de decisiones informada en cualquier momento. Los dashboards se actualizan automáticamente desde los sistemas fuente, garantizando información actualizada y precisa.</p>
+                    </div>
+                    <div class="herramienta-card">
+                        <h4>Sistemas Contables</h4>
+                        <p>Software especializado para registro contable, conciliaciones bancarias y cumplimiento fiscal.</p>
+                        <p>Además de SAP, se utilizan sistemas especializados para funciones contables específicas. Estos incluyen sistemas de conciliación bancaria automatizada, software de gestión de impuestos que se adapta a las regulaciones de más de 200 países, sistemas de gestión de activos fijos, y plataformas de auditoría interna. Los sistemas contables están integrados con bancos para conciliación automática, con autoridades fiscales para presentación electrónica de declaraciones, y con auditores externos para facilitar el proceso de auditoría anual. Se implementan controles internos automatizados que detectan discrepancias y errores antes de que se conviertan en problemas mayores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navegacion-sala">
+                <button class="btn-nav-sala" onclick="salaAnterior(6)">← Anterior</button>
+                <button class="btn-nav-sala" onclick="irAMenu()">
+                    <img src="IMAGENES/LOGO DEL BOTON MENU.webp" alt="Menú" class="btn-menu-icon">
+                    Menú
+                </button>
+                <button class="btn-nav-sala" onclick="salaSiguiente(6)">Siguiente →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALA 7: CLIENTE Y MARKETING -->
+    <section class="sala" id="sala7">
+        <div class="sala-container">
+            <div class="sala-header">
+                <span class="sala-indicador">Sala 7 de 9</span>
+                <h2 class="sala-titulo">Cliente y Marketing</h2>
+                <p class="sala-subtitulo">Exposición Publicitaria</p>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Segmentación y Buyer Persona</h3>
+                <div class="segmentacion-grid">
+                    <div class="segmento-card">
+                        <h4>Segmento: Jóvenes (18-30 años)</h4>
+                        <p><strong>Buyer Persona:</strong> "María, 25 años, estudiante universitaria, activa en redes sociales, busca productos refrescantes y con propósito social. Valora la sostenibilidad y las experiencias compartidas.</p>
+                    </div>
+                    <div class="segmento-card">
+                        <h4>Segmento: Familias (30-50 años)</h4>
+                        <p><strong>Buyer Persona:</strong> "Carlos, 38 años, padre de dos hijos, busca productos de calidad y confianza. Compra en supermercados, valora la tradición y la seguridad alimentaria.</p>
+                    </div>
+                    <div class="segmento-card">
+                        <h4>Segmento: Adultos Mayores (50+ años)</h4>
+                        <p><strong>Buyer Persona:</strong> "Ana, 55 años, valora la nostalgia y la tradición. Prefiere sabores clásicos y compra en tiendas de barrio. Leal a la marca desde hace décadas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Comportamiento de Compra</h3>
+                <ul class="comportamiento-lista">
+                    <li><strong>Impulso:</strong> 60% de las compras son decisiones de último momento en puntos de venta</li>
+                    <li><strong>Lealtad:</strong> 70% de consumidores repiten compra de la marca</li>
+                    <li><strong>Ocasiones:</strong> Comidas, reuniones sociales, eventos deportivos, celebraciones</li>
+                    <li><strong>Influencia:</strong> Recomendaciones de amigos, publicidad emocional, disponibilidad en tienda</li>
+                </ul>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Las 4P del Marketing</h3>
+                <div class="marketing-4p">
+                    <div class="p-card" onclick="mostrarDetalle4P('producto')">
+                        <div class="p-icono">
+                        </div>
+                        <h4>Producto</h4>
+                        <div class="p-detalle" id="producto">
+                        </div>
+                    </div>
+                    <div class="p-card" onclick="mostrarDetalle4P('precio')">
+                        <div class="p-icono">
+                        </div>
+                        <h4>Precio</h4>
+                        <div class="p-detalle" id="precio">
+                        </div>
+                    </div>
+                    <div class="p-card" onclick="mostrarDetalle4P('plaza')">
+                        <div class="p-icono">
+                        </div>
+                        <h4>Plaza (Distribución)</h4>
+                        <div class="p-detalle" id="plaza">
+                        </div>
+                    </div>
+                    <div class="p-card" onclick="mostrarDetalle4P('promocion')">
+                        <div class="p-icono">
+                        </div>
+                        <h4>Promoción</h4>
+                        <div class="p-detalle" id="promocion">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Canales de Marketing</h3>
+                <div class="canales-grid">
+                    <div class="canal-card">
+                        <h4>Canales Tradicionales</h4>
+                        <p>Televisión, radio, prensa, vallas publicitarias, eventos masivos</p>
+                        <p>Los canales tradicionales siguen siendo importantes, especialmente para alcanzar audiencias masivas. La televisión representa aproximadamente el 40% del presupuesto de marketing, con presencia en eventos de alto rating como el Super Bowl, donde un comercial de 30 segundos puede costar más de $6 millones. La radio se utiliza para llegar a audiencias locales y durante horas pico. La publicidad exterior (vallas, transporte público) proporciona alta visibilidad en áreas urbanas. Los eventos masivos incluyen patrocinios de conciertos, festivales, y eventos deportivos que generan experiencia de marca y engagement emocional con los consumidores.</p>
+                    </div>
+                    <div class="canal-card">
+                        <h4>Canales Digitales</h4>
+                        <p>Redes sociales (Instagram, Facebook, TikTok), YouTube, Google Ads, email marketing, apps móviles</p>
+                        <p>Los canales digitales están creciendo rápidamente y representan aproximadamente el 35% del presupuesto de marketing. Coca-Cola tiene presencia activa en todas las principales redes sociales, con más de 100 millones de seguidores combinados. Las campañas digitales incluyen contenido generado por usuarios, colaboraciones con influencers, videos virales, y publicidad programática. YouTube es una plataforma clave para contenido de video, con más de 2 mil millones de visualizaciones anuales. Google Ads se utiliza para búsqueda y display advertising. Las apps móviles como "Coca-Cola Journey" proporcionan contenido editorial y experiencias interactivas. El email marketing se utiliza para programas de lealtad y comunicación directa con consumidores. La inversión en marketing digital está creciendo a una tasa del 15% anual.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Campañas Destacadas</h3>
+                <div class="carrusel-campanas">
+                    <div class="campana-slide activa">
+                        <h4>"Share a Coke" (2011-presente)</h4>
+                        <p>Campaña global que personaliza botellas con nombres propios, generando conexión emocional y viralidad en redes sociales. Resultado: +2% en ventas globales.</p>
+                    </div>
+                    <div class="campana-slide">
+                        <h4>"Taste the Feeling" (2016)</h4>
+                        <p>Campaña unificada que unifica todas las variantes bajo un mismo mensaje emocional, enfocada en la experiencia sensorial del consumo.</p>
+                    </div>
+                    <div class="campana-slide">
+                        <h4>"World Without Waste" (2018-presente)</h4>
+                        <p>Iniciativa de sostenibilidad que comunica el compromiso con el reciclaje y la economía circular, posicionando la marca como responsable.</p>
+                    </div>
+                </div>
+                <div class="carrusel-controls">
+                    <button class="btn-carrusel" onclick="cambiarCampana(-1)">← Anterior</button>
+                    <button class="btn-carrusel" onclick="cambiarCampana(1)">Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Indicadores de Mercadeo</h3>
+                <div class="indicadores-marketing">
+                    <div class="indicador-mkt">
+                        <h4>Brand Awareness</h4>
+                        <p>94% reconocimiento global de marca</p>
+                    </div>
+                    <div class="indicador-mkt">
+                        <h4>Market Share</h4>
+                        <p>42% del mercado global de refrescos</p>
+                    </div>
+                    <div class="indicador-mkt">
+                        <h4>Engagement Digital</h4>
+                        <p>+100 millones de interacciones mensuales en redes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navegacion-sala">
+                <button class="btn-nav-sala" onclick="salaAnterior(7)">← Anterior</button>
+                <button class="btn-nav-sala" onclick="irAMenu()">
+                    <img src="IMAGENES/LOGO DEL BOTON MENU.webp" alt="Menú" class="btn-menu-icon">
+                    Menú
+                </button>
+                <button class="btn-nav-sala" onclick="salaSiguiente(7)">Siguiente →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALA 8: INNOVACIÓN Y FUTURO -->
+    <section class="sala sala-futurista" id="sala8">
+        <div class="sala-container">
+            <div class="sala-header">
+                <span class="sala-indicador">Sala 8 de 9</span>
+                <h2 class="sala-titulo">Innovación y Futuro</h2>
+                <p class="sala-subtitulo">Zona Futurista</p>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Tecnologías Disruptivas</h3>
+                <div class="tecnologias-grid">
+                    <div class="tecnologia-card" onclick="mostrarTecnologia('ia')">
+                        <div class="tecnologia-icono">
+                        </div>
+                        <h4>Inteligencia Artificial</h4>
+                        <div class="tecnologia-detalle" id="ia">
+                        </div>
+                    </div>
+                    <div class="tecnologia-card" onclick="mostrarTecnologia('bigdata')">
+                        <div class="tecnologia-icono">
+                        </div>
+                        <h4>Big Data</h4>
+                        <div class="tecnologia-detalle" id="bigdata">
+                        </div>
+                    </div>
+                    <div class="tecnologia-card" onclick="mostrarTecnologia('automatizacion')">
+                        <div class="tecnologia-icono">
+                        </div>
+                        <h4>Automatización</h4>
+                        <div class="tecnologia-detalle" id="automatizacion">
+                        </div>
+                    </div>
+                    <div class="tecnologia-card" onclick="mostrarTecnologia('erp')">
+                        <div class="tecnologia-icono">
+                        </div>
+                        <h4>ERP/CRM</h4>
+                        <div class="tecnologia-detalle" id="erp">
+                        </div>
+                    </div>
+                    <div class="tecnologia-card" onclick="mostrarTecnologia('iot')">
+                        <div class="tecnologia-icono">
+                        </div>
+                        <h4>IoT (Internet de las Cosas)</h4>
+                        <div class="tecnologia-detalle" id="iot">
+                        </div>
+                    </div>
+                    <div class="tecnologia-card" onclick="mostrarTecnologia('analitica')">
+                        <div class="tecnologia-icono">
+                        </div>
+                        <h4>Analítica de Consumo</h4>
+                        <div class="tecnologia-detalle" id="analitica">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Mejora de Procesos mediante Tecnología</h3>
+                <div class="mejoras-proceso">
+                    <div class="mejora-proceso-item">
+                        <h4>Optimización de Inventario</h4>
+                        <p>IA predice demanda y optimiza niveles de stock, reduciendo desperdicios y mejorando disponibilidad.</p>
+                        <p>Los sistemas de optimización de inventario utilizan algoritmos de machine learning que analizan historial de ventas, tendencias estacionales, eventos locales, y factores externos como clima para predecir demanda con alta precisión. Esto permite mantener niveles óptimos de inventario: suficiente para satisfacer demanda pero no excesivo para evitar obsolescencia. Los sistemas alertan automáticamente cuando los niveles están bajos o altos, y sugieren acciones correctivas. La optimización de inventario ha reducido desperdicios en un 40% y mejorado la disponibilidad de productos en un 15%, resultando en mayores ventas y satisfacción del cliente.</p>
+                    </div>
+                    <div class="mejora-proceso-item">
+                        <h4>Logística Inteligente</h4>
+                        <p>Rutas optimizadas mediante algoritmos, reduciendo costos de transporte y tiempo de entrega.</p>
+                        <p>Los sistemas de optimización de rutas consideran múltiples variables: distancia, tráfico en tiempo real, capacidad de vehículos, ventanas de tiempo de entrega, y prioridades de clientes. Los algoritmos generan rutas óptimas que minimizan tiempo de viaje, consumo de combustible, y costos operativos. Los sistemas se actualizan dinámicamente cuando hay cambios en tráfico o pedidos urgentes. La logística inteligente también incluye gestión de flota, mantenimiento predictivo de vehículos, y seguimiento GPS en tiempo real. Esto ha resultado en reducción del 20% en costos de transporte, 15% menos tiempo de entrega, y 30% menos emisiones de CO2.</p>
+                    </div>
+                    <div class="mejora-proceso-item">
+                        <h4>Experiencia del Cliente</h4>
+                        <p>CRM personaliza interacciones, chatbots atienden consultas 24/7 y apps móviles mejoran engagement.</p>
+                        <p>El CRM almacena historial completo de interacciones con cada cliente, permitiendo personalización de mensajes, ofertas, y servicio. Los chatbots con IA pueden resolver el 80% de consultas comunes sin intervención humana, proporcionando respuestas instantáneas 24/7. Las apps móviles proporcionan contenido personalizado, programas de lealtad, y experiencias interactivas como realidad aumentada. Los sistemas de feedback en tiempo real permiten medir satisfacción y responder rápidamente a problemas. La personalización basada en datos ha aumentado la satisfacción del cliente en un 25% y la retención en un 20%.</p>
+                    </div>
+                    <div class="mejora-proceso-item">
+                        <h4>Producción Eficiente</h4>
+                        <p>Automatización reduce errores humanos, aumenta velocidad de producción y mejora calidad consistente.</p>
+                        <p>La automatización en producción incluye robots para tareas repetitivas, sistemas de control de calidad automatizados, y gestión de líneas de producción inteligente. Los sistemas detectan automáticamente desviaciones de calidad y ajustan procesos en tiempo real. La automatización ha aumentado la velocidad de producción en un 35%, reducido errores en un 90%, y mejorado consistencia de calidad. Los sistemas también optimizan uso de energía, reduciendo costos operativos. La producción eficiente permite responder más rápidamente a cambios en demanda y reducir tiempos de ciclo desde orden hasta entrega.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Objetivos de Desarrollo Sostenible (ODS)</h3>
+                <div class="ods-grid">
+                    <div class="ods-card">
+                        <div class="ods-badge">6</div>
+                        <h4>Agua Limpia y Saneamiento</h4>
+                        <p>Devolver a la naturaleza el 100% del agua utilizada en bebidas para 2030. Programas de reabastecimiento hídrico.</p>
+                    </div>
+                    <div class="ods-card">
+                        <div class="ods-badge">12</div>
+                        <h4>Producción y Consumo Responsables</h4>
+                        <p>Envases 100% reciclables para 2025. Reducción de plástico virgen y promoción de economía circular.</p>
+                    </div>
+                    <div class="ods-card">
+                        <div class="ods-badge">13</div>
+                        <h4>Acción por el Clima</h4>
+                        <p>Neutralidad de carbono para 2040. Uso de energía renovable y reducción de emisiones en toda la cadena de valor.</p>
+                    </div>
+                    <div class="ods-card">
+                        <div class="ods-badge">17</div>
+                        <h4>Alianzas para los Objetivos</h4>
+                        <p>Colaboración con gobiernos, ONGs y comunidades para alcanzar metas de sostenibilidad y desarrollo social.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navegacion-sala">
+                <button class="btn-nav-sala" onclick="salaAnterior(8)">← Anterior</button>
+                <button class="btn-nav-sala" onclick="irAMenu()">
+                    <img src="IMAGENES/LOGO DEL BOTON MENU.webp" alt="Menú" class="btn-menu-icon">
+                    Menú
+                </button>
+                <button class="btn-nav-sala" onclick="salaSiguiente(8)">Siguiente →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALA 9: TRIVIA -->
+    <section class="sala" id="sala9">
+        <div class="sala-container">
+            <div class="sala-header">
+                <span class="sala-indicador">Sala 9 de 9</span>
+                <h2 class="sala-titulo">Trivia del Museo Coca-Cola</h2>
+                <p class="sala-subtitulo">Pon a prueba tus conocimientos</p>
+            </div>
+
+            <div class="trivia-container">
+                <div class="trivia-progress">
+                    <div class="trivia-stats">
+                        <span>Pregunta <span id="preguntaActual">1</span> de <span id="totalPreguntas">10</span></span>
+                        <span>Puntaje: <span id="puntajeActual">0</span></span>
+                    </div>
+                    <div class="trivia-bar">
+                        <div class="trivia-bar-fill" id="triviaBarFill"></div>
+                    </div>
+                </div>
+
+                <div class="trivia-pregunta" id="triviaPregunta">
+                    <!-- Las preguntas se cargarán dinámicamente -->
+                </div>
+
+                <div class="trivia-opciones" id="triviaOpciones">
+                    <!-- Las opciones se cargarán dinámicamente -->
+                </div>
+
+                <div class="trivia-feedback" id="triviaFeedback"></div>
+
+                <div class="trivia-controls">
+                    <button class="btn-trivia" id="btnSiguientePregunta" onclick="siguientePregunta()" style="display: none;">Siguiente Pregunta →</button>
+                    <button class="btn-trivia" id="btnReiniciar" onclick="reiniciarTrivia()" style="display: none;">Reiniciar Trivia</button>
+                </div>
+
+                <div class="trivia-resultado" id="triviaResultado" style="display: none;">
+                    <h3>¡Trivia Completada!</h3>
+                    <p class="resultado-puntaje">Tu puntaje final: <span id="puntajeFinal">0</span> / 10</p>
+                    <p class="resultado-mensaje" id="resultadoMensaje"></p>
+                </div>
+            </div>
+
+            <div class="navegacion-sala">
+                <button class="btn-nav-sala" onclick="salaAnterior(9)">← Anterior</button>
+                <button class="btn-nav-sala" onclick="irAMenu()">
+                    <img src="IMAGENES/LOGO DEL BOTON MENU.webp" alt="Menú" class="btn-menu-icon">
+                    Menú
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Final: Fuentes y Recursos -->
+    <section class="sala recursos" id="recursos">
+        <div class="sala-container">
+            <div class="sala-header">
+                <h2 class="sala-titulo">Fuentes y Recursos</h2>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Fuentes APA</h3>
+                <div class="fuentes-lista">
+                    <div class="fuente-item">
+                        <p>The Coca-Cola Company. (2023). <em>Annual Report 2023</em>. https://www.coca-colacompany.com/reports/annual-report-2023</p>
+                    </div>
+                    <div class="fuente-item">
+                        <p>FEMSA. (2023). <em>Informe Anual 2023</em>. https://www.femsa.com/es/investors/annual-reports</p>
+                    </div>
+                    <div class="fuente-item">
+                        <p>Pendergrast, M. (2013). <em>For God, Country, and Coca-Cola: The Definitive History of the Great American Soft Drink and the Company That Makes It</em> (3rd ed.). Basic Books.</p>
+                    </div>
+                    <div class="fuente-item">
+                        <p>Keller, K. L. (2013). <em>Strategic Brand Management: Building, Measuring, and Managing Brand Equity</em> (4th ed.). Pearson.</p>
+                    </div>
+                    <div class="fuente-item">
+                        <p>United Nations. (2023). <em>Sustainable Development Goals Report 2023</em>. https://unstats.un.org/sdgs/report/2023/</p>
+                    </div>
+                    <div class="fuente-item">
+                        <p>Statista. (2024). <em>Coca-Cola Company - Statistics & Facts</em>. https://www.statista.com/topics/1348/coca-cola-company/</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exhibicion-panel">
+                <h3>Ideas de Imágenes por Sala</h3>
+                <div class="imagenes-sugerencias">
+                    <div class="sugerencia-item">
+                        <h4>Sala 1 - Impacto</h4>
+                        <p><strong>Palabras clave:</strong> "Coca-Cola bottle iconic", "Coca-Cola product display", "red Coca-Cola can", "Coca-Cola logo close-up"</p>
+                    </div>
+                    <div class="sugerencia-item">
+                        <h4>Sala 2 - ADN Corporativo</h4>
+                        <p><strong>Palabras clave:</strong> "Coca-Cola history timeline", "Coca-Cola vintage ads", "Coca-Cola headquarters Atlanta", "Coca-Cola historical photos"</p>
+                    </div>
+                    <div class="sugerencia-item">
+                        <h4>Sala 3 - Proceso Administrativo</h4>
+                        <p><strong>Palabras clave:</strong> "business management process", "corporate planning", "organizational structure", "management cycle diagram"</p>
+                    </div>
+                    <div class="sugerencia-item">
+                        <h4>Sala 4 - Producción</h4>
+                        <p><strong>Palabras clave:</strong> "Coca-Cola factory production line", "bottling plant", "Coca-Cola manufacturing", "production process flowchart"</p>
+                    </div>
+                    <div class="sugerencia-item">
+                        <h4>Sala 5 - Talento Humano</h4>
+                        <p><strong>Palabras clave:</strong> "diverse team workplace", "employee training", "corporate culture", "human resources management"</p>
+                    </div>
+                    <div class="sugerencia-item">
+                        <h4>Sala 6 - Finanzas</h4>
+                        <p><strong>Palabras clave:</strong> "financial charts graphs", "business analytics dashboard", "corporate finance", "financial data visualization"</p>
+                    </div>
+                    <div class="sugerencia-item">
+                        <h4>Sala 7 - Marketing</h4>
+                        <p><strong>Palabras clave:</strong> "Coca-Cola advertising campaigns", "Share a Coke campaign", "Coca-Cola billboard", "marketing strategy"</p>
+                    </div>
+                    <div class="sugerencia-item">
+                        <h4>Sala 8 - Innovación</h4>
+                        <p><strong>Palabras clave:</strong> "artificial intelligence technology", "sustainable packaging", "digital transformation", "future technology"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navegacion-sala">
+                <button class="btn-nav-sala" onclick="irAMenu()">
+                    <img src="IMAGENES/LOGO DEL BOTON MENU.webp" alt="Menú" class="btn-menu-icon">
+                    Volver al Menú Principal
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón flotante para volver arriba -->
+    <button class="btn-flotante" id="btnVolverArriba" onclick="irAMenu()" title="Volver al menú">
+        <img src="IMAGENES/ALT I.webp" alt="Lata Coca-Cola" class="btn-flotante-lata" onerror="this.src='IMAGENES/ALT I.png'; this.onerror=function(){this.src='IMAGENES/ALT I.jpg'; this.onerror=function(){this.src='IMAGENES/LOGO DEL BOTON MENU.webp';}}">
+    </button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+

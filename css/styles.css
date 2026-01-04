@@ -1,0 +1,2158 @@
+/* ============================================
+   MUSEO DIGITAL COCA-COLA - ESTILOS
+   Diseño Moderno Tipo Museo
+   ============================================ */
+
+/* Variables CSS */
+:root {
+    --color-coca-cola: #E41C23;
+    --color-negro: #0A0A0A;
+    --color-blanco: #FFFFFF;
+    --color-gris: #B0B0B0;
+    --color-gris-oscuro: #1A1A1A;
+    --color-gris-medio: #2A2A2A;
+    --sombra-neon: 0 0 20px rgba(228, 28, 35, 0.5);
+    --transicion: all 0.3s ease;
+}
+
+/* Reset y Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--color-negro) url('../IMAGENES/IMAGEN DE FONFO PARA TODAS LAS SALAS.jpeg') center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--color-blanco);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.6);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+body.modo-presentacion {
+    overflow: hidden;
+}
+
+body.modo-presentacion .sala {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Navegación Principal */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem 3rem;
+    z-index: 1001;
+    border-bottom: 3px solid var(--color-coca-cola);
+    box-shadow: var(--sombra-neon);
+    min-height: 100px;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.logo-header {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    max-width: 300px;
+}
+
+.museum-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--color-coca-cola);
+    text-shadow: 0 0 10px rgba(228, 28, 35, 0.8);
+    margin: 0;
+    font-weight: 700;
+}
+
+.logo-corporativo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo-historia {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.info-detalle {
+    font-size: 0.9rem;
+    color: var(--color-gris);
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.finanza-detalle {
+    font-size: 0.9rem;
+    color: var(--color-gris);
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.btn-nav {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: var(--transicion);
+    box-shadow: 0 4px 15px rgba(228, 28, 35, 0.3);
+}
+
+.btn-nav:hover {
+    background: #C4161D;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(228, 28, 35, 0.5);
+}
+
+/* Salas */
+.sala {
+    min-height: 100vh;
+    padding: 12rem 2rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    position: relative;
+    z-index: 1;
+}
+
+.sala.activa {
+    opacity: 1;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sala-container {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.sala-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--color-coca-cola);
+}
+
+.sala-indicador {
+    display: inline-block;
+    background: var(--color-coca-cola);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sala-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--color-blanco);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.sala-subtitulo {
+    font-size: 1.3rem;
+    color: var(--color-gris);
+    font-style: italic;
+}
+
+/* Menú Principal - Grid de Salas */
+.menu-principal {
+    padding-top: 10rem;
+}
+
+.salas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sala-card {
+    background: var(--color-gris-oscuro);
+    border: 2px solid var(--color-coca-cola);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicion);
+    position: relative;
+    overflow: hidden;
+}
+
+.sala-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(228, 28, 35, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.sala-card:hover::before {
+    left: 100%;
+}
+
+.sala-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-neon);
+    border-color: var(--color-coca-cola);
+}
+
+.sala-card-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-coca-cola);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.sala-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-blanco);
+}
+
+.sala-card p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+}
+
+/* Paneles de Exhibición */
+.exhibicion-panel {
+    background: var(--color-gris-oscuro);
+    border: 1px solid var(--color-gris-medio);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transicion);
+}
+
+.exhibicion-panel:hover {
+    border-color: var(--color-coca-cola);
+    box-shadow: 0 6px 25px rgba(228, 28, 35, 0.2);
+}
+
+.exhibicion-panel.principal {
+    text-align: center;
+    padding: 3rem;
+}
+
+.exhibicion-panel h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--color-coca-cola);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-gris-medio);
+    padding-bottom: 0.5rem;
+}
+
+.exhibicion-panel p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-gris);
+}
+
+/* Imagen Grande */
+.imagen-grande {
+    margin: 2rem 0;
+}
+
+.img-placeholder {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--color-coca-cola);
+    box-shadow: var(--sombra-neon);
+    background: var(--color-gris-medio);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gris);
+}
+
+/* Frase Impactante */
+.frase-impactante {
+    margin: 2rem 0;
+}
+
+.frase-impactante blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--color-blanco);
+    border-left: 4px solid var(--color-coca-cola);
+    padding-left: 2rem;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Equipo */
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.integrante-card {
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--color-gris);
+}
+
+.integrante-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 0.5rem;
+}
+
+.integrante-card .ficha {
+    color: var(--color-gris);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.integrante-card .bloque {
+    color: var(--color-gris);
+    font-size: 0.9rem;
+}
+
+/* Dato Curioso */
+.dato-curioso {
+    margin: 2rem 0;
+}
+
+.btn-curioso {
+    background: transparent;
+    border: 2px solid var(--color-coca-cola);
+    color: var(--color-coca-cola);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: var(--transicion);
+}
+
+.btn-curioso:hover {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+    box-shadow: var(--sombra-neon);
+}
+
+.curioso-contenido {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: var(--color-gris-medio);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-coca-cola);
+    display: none;
+}
+
+.curioso-contenido.mostrar {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navegación entre Salas */
+.navegacion-sala {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-gris-medio);
+}
+
+.btn-nav-sala {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: var(--transicion);
+    flex: 1;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-menu-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.btn-nav-sala:hover {
+    background: #C4161D;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-neon);
+}
+
+/* Sala 2 - Información Corporativa */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.info-card {
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-coca-cola);
+}
+
+.info-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-card p {
+    color: var(--color-blanco);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.clasificacion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.clasificacion-item {
+    padding: 1rem;
+    background: var(--color-gris-medio);
+    border-radius: 8px;
+    border: 1px solid var(--color-gris);
+}
+
+.clasificacion-item strong {
+    color: var(--color-coca-cola);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--color-coca-cola);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-marker {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--sombra-neon);
+    transition: var(--transicion);
+}
+
+.timeline-item:hover .timeline-marker {
+    transform: scale(1.2);
+    box-shadow: 0 0 30px rgba(228, 28, 35, 0.8);
+}
+
+.timeline-content {
+    flex: 1;
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 0 2rem;
+    border: 1px solid var(--color-gris);
+    transition: var(--transicion);
+}
+
+.timeline-item:hover .timeline-content {
+    border-color: var(--color-coca-cola);
+    box-shadow: 0 4px 15px rgba(228, 28, 35, 0.3);
+}
+
+.timeline-content h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal.mostrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: var(--color-gris-oscuro);
+    border: 2px solid var(--color-coca-cola);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: var(--sombra-neon);
+    animation: slideUp 0.3s ease;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-flujo {
+    max-width: 800px;
+}
+
+.modal-flujo h3 {
+    color: var(--color-coca-cola);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-coca-cola);
+    padding-bottom: 0.5rem;
+}
+
+.modal-flujo p {
+    color: var(--color-gris);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.modal-flujo ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.modal-flujo li {
+    color: var(--color-gris);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.modal-flujo li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-coca-cola);
+    font-weight: bold;
+}
+
+.modal-flujo li strong {
+    color: var(--color-blanco);
+}
+
+.modal-talento {
+    max-width: 800px;
+}
+
+.modal-talento h3 {
+    color: var(--color-coca-cola);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-coca-cola);
+    padding-bottom: 0.5rem;
+}
+
+.modal-talento p {
+    color: var(--color-gris);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.modal-talento ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.modal-talento li {
+    color: var(--color-gris);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.modal-talento li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-coca-cola);
+    font-weight: bold;
+}
+
+.modal-talento li strong {
+    color: var(--color-blanco);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--color-gris);
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.modal-close:hover {
+    color: var(--color-coca-cola);
+    transform: rotate(90deg);
+}
+
+.modal-content h3 {
+    color: var(--color-coca-cola);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.modal-content p {
+    color: var(--color-gris);
+    line-height: 1.8;
+}
+
+/* Sala 3 - Proceso Administrativo */
+.proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.proceso-card {
+    background: var(--color-gris-medio);
+    border: 2px solid var(--color-gris);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicion);
+    position: relative;
+    overflow: hidden;
+}
+
+.proceso-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(228, 28, 35, 0.1) 0%, transparent 70%);
+    transition: transform 0.5s;
+    transform: scale(0);
+}
+
+.proceso-card:hover::before {
+    transform: scale(1);
+}
+
+.proceso-card:hover {
+    border-color: var(--color-coca-cola);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(228, 28, 35, 0.3);
+}
+
+.proceso-icono {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono-proceso {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.icono-talento {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.icono-tecnologia {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.icono-4p {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.img-4p {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.proceso-card h3 {
+    color: var(--color-coca-cola);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: visible;
+    text-overflow: clip;
+    display: block;
+}
+
+.proceso-contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+}
+
+.proceso-contenido.mostrar {
+    max-height: 500px;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--color-gris);
+}
+
+.proceso-contenido p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.diagrama-proceso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--color-gris-medio);
+    border-radius: 12px;
+}
+
+.diagrama-item {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(228, 28, 35, 0.3);
+}
+
+.diagrama-flecha {
+    font-size: 2rem;
+    color: var(--color-coca-cola);
+}
+
+.diagrama-flecha.ciclo {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.diagrama-texto {
+    text-align: center;
+    color: var(--color-gris);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Sala 4 - Producción */
+.flujograma-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+.flujo-paso {
+    background: var(--color-gris-medio);
+    border: 2px solid var(--color-coca-cola);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicion);
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.flujo-paso:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-neon);
+    background: var(--color-gris-oscuro);
+    border-color: var(--color-coca-cola);
+}
+
+.flujo-numero {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(228, 28, 35, 0.3);
+}
+
+.flujo-paso h4 {
+    color: var(--color-blanco);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.flujo-paso p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.indicadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.indicador-card {
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-coca-cola);
+    text-align: center;
+}
+
+.indicador-card h4 {
+    color: var(--color-blanco);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.indicador-valor {
+    color: var(--color-coca-cola);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.mejoras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.mejora-card {
+    background: var(--color-gris-medio);
+    border: 2px solid var(--color-gris);
+    border-radius: 10px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.mejora-card:hover {
+    border-color: var(--color-coca-cola);
+    box-shadow: 0 4px 15px rgba(228, 28, 35, 0.2);
+}
+
+.mejora-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 1rem;
+}
+
+.mejora-contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+}
+
+.mejora-contenido.mostrar {
+    max-height: 500px;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--color-gris);
+}
+
+.mejora-contenido p {
+    color: var(--color-gris);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Sala 5 - Talento Humano */
+.talento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.talento-card-flip {
+    perspective: 1000px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.talento-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.talento-card-flip:hover .talento-card-inner {
+    transform: rotateY(180deg);
+}
+
+.talento-card-front,
+.talento-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 2px solid var(--color-coca-cola);
+}
+
+.talento-card-front {
+    background: var(--color-gris-medio);
+}
+
+.talento-card-back {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+    transform: rotateY(180deg);
+}
+
+.talento-card-front h4 {
+    color: var(--color-coca-cola);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.talento-card-back p {
+    color: var(--color-blanco);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}
+
+.desafios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.desafio-card {
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-coca-cola);
+}
+
+.desafio-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 0.5rem;
+}
+
+.desafio-card p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+}
+
+.btn-rol {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: var(--transicion);
+    margin-top: 1rem;
+}
+
+.btn-rol:hover {
+    background: #C4161D;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-neon);
+}
+
+.rol-contenido {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--color-gris-medio);
+    border-radius: 10px;
+    border-left: 4px solid var(--color-coca-cola);
+    display: none;
+}
+
+.rol-contenido.mostrar {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.rol-contenido h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 1rem;
+}
+
+.rol-contenido ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rol-contenido li {
+    color: var(--color-gris);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.rol-contenido li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-coca-cola);
+}
+
+.rol-contenido li strong {
+    color: var(--color-blanco);
+}
+
+/* Sala 6 - Finanzas */
+.finanzas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.finanza-card {
+    background: var(--color-gris-medio);
+    border: 2px solid var(--color-gris);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transicion);
+}
+
+.finanza-card:hover {
+    border-color: var(--color-coca-cola);
+    box-shadow: 0 4px 15px rgba(228, 28, 35, 0.2);
+}
+
+.finanza-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.finanza-valor {
+    color: var(--color-blanco);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.finanza-card p {
+    color: var(--color-gris);
+    font-size: 0.9rem;
+}
+
+.indicadores-financieros {
+    margin-top: 2rem;
+}
+
+.indicador-financiero {
+    margin-bottom: 2rem;
+}
+
+.indicador-financiero h4 {
+    color: var(--color-blanco);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.barra-grafico {
+    background: var(--color-gris-medio);
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.barra-fill {
+    background: linear-gradient(90deg, var(--color-coca-cola), #FF4D5A);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    color: var(--color-blanco);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: width 1s ease;
+    box-shadow: 0 0 10px rgba(228, 28, 35, 0.5);
+}
+
+.tabla-financiera {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: var(--color-gris-medio);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla-financiera thead {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+}
+
+.tabla-financiera th,
+.tabla-financiera td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-gris);
+}
+
+.tabla-financiera tbody tr:hover {
+    background: var(--color-gris-oscuro);
+}
+
+.tabla-financiera td {
+    color: var(--color-gris);
+}
+
+.herramientas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.herramienta-card {
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-coca-cola);
+}
+
+.herramienta-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 0.5rem;
+}
+
+.herramienta-card p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+}
+
+/* Sala 7 - Marketing */
+.segmentacion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.segmento-card {
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-coca-cola);
+}
+
+.segmento-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 0.5rem;
+}
+
+.segmento-card p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+}
+
+.comportamiento-lista {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.comportamiento-lista li {
+    background: var(--color-gris-medio);
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-coca-cola);
+    color: var(--color-gris);
+}
+
+.comportamiento-lista li strong {
+    color: var(--color-blanco);
+}
+
+.marketing-4p {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.p-card {
+    background: var(--color-gris-medio);
+    border: 2px solid var(--color-gris);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.p-card:hover {
+    border-color: var(--color-coca-cola);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(228, 28, 35, 0.3);
+}
+
+.p-icono {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.p-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.p-detalle {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+}
+
+.p-detalle.mostrar {
+    max-height: 200px;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--color-gris);
+}
+
+.p-detalle p {
+    color: var(--color-gris);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.canales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.canal-card {
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-coca-cola);
+}
+
+.canal-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 0.5rem;
+}
+
+.canal-card p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+}
+
+.carrusel-campanas {
+    position: relative;
+    margin: 2rem 0;
+    min-height: 200px;
+}
+
+.campana-slide {
+    display: none;
+    background: var(--color-gris-medio);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-coca-cola);
+}
+
+.campana-slide.activa {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.campana-slide h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+.campana-slide p {
+    color: var(--color-gris);
+    line-height: 1.8;
+}
+
+.carrusel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-carrusel {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: var(--transicion);
+}
+
+.btn-carrusel:hover {
+    background: #C4161D;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-neon);
+}
+
+.indicadores-marketing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.indicador-mkt {
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid var(--color-coca-cola);
+}
+
+.indicador-mkt h4 {
+    color: var(--color-blanco);
+    margin-bottom: 0.5rem;
+}
+
+.indicador-mkt p {
+    color: var(--color-coca-cola);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Sala 8 - Innovación (Futurista) */
+.sala-futurista {
+    /* El fondo ahora viene del body */
+}
+
+.sala-futurista .sala-titulo {
+    color: var(--color-coca-cola);
+    text-shadow: 0 0 20px rgba(228, 28, 35, 0.8);
+}
+
+.sala-futurista .sala-indicador {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+}
+
+.tecnologias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tecnologia-card {
+    background: var(--color-gris-oscuro);
+    border: 2px solid var(--color-coca-cola);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicion);
+    position: relative;
+    overflow: hidden;
+}
+
+.tecnologia-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(228, 28, 35, 0.1) 0%, transparent 70%);
+    transition: transform 0.5s;
+    transform: scale(0);
+}
+
+.tecnologia-card:hover::before {
+    transform: scale(1);
+}
+
+.tecnologia-card:hover {
+    box-shadow: var(--sombra-neon);
+    transform: translateY(-5px);
+}
+
+.tecnologia-icono {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tecnologia-icono img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.p-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.p-icono img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.tecnologia-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.tecnologia-detalle {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+}
+
+.tecnologia-detalle.mostrar {
+    max-height: 200px;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--color-coca-cola);
+}
+
+.tecnologia-detalle p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.mejoras-proceso {
+    margin-top: 2rem;
+}
+
+.mejora-proceso-item {
+    background: var(--color-gris-oscuro);
+    border-left: 4px solid var(--color-coca-cola);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.mejora-proceso-item h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 0.5rem;
+}
+
+.mejora-proceso-item p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+}
+
+.ods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ods-card {
+    background: var(--color-gris-oscuro);
+    border: 2px solid var(--color-coca-cola);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transicion);
+    position: relative;
+}
+
+.ods-card:hover {
+    box-shadow: var(--sombra-neon);
+    transform: translateY(-5px);
+}
+
+.ods-badge {
+    background: var(--color-coca-cola);
+    color: var(--color-negro);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+    box-shadow: 0 0 20px rgba(228, 28, 35, 0.5);
+}
+
+.ods-card h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.ods-card p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Sala 9 - Trivia */
+.trivia-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.trivia-progress {
+    margin-bottom: 2rem;
+}
+
+.trivia-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: var(--color-gris);
+    font-weight: 600;
+}
+
+.trivia-bar {
+    background: var(--color-gris-medio);
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.trivia-bar-fill {
+    background: linear-gradient(90deg, var(--color-coca-cola), #FF4D5A);
+    height: 100%;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(228, 28, 35, 0.5);
+}
+
+.trivia-pregunta {
+    background: var(--color-gris-medio);
+    border: 2px solid var(--color-coca-cola);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.trivia-pregunta h3 {
+    color: var(--color-blanco);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.trivia-opciones {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.opcion-btn {
+    background: var(--color-gris-medio);
+    border: 2px solid var(--color-gris);
+    color: var(--color-blanco);
+    padding: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: var(--transicion);
+    text-align: left;
+}
+
+.opcion-btn:hover {
+    border-color: var(--color-coca-cola);
+    background: var(--color-gris-oscuro);
+    transform: translateX(5px);
+}
+
+.opcion-btn.correcta {
+    background: #28a745;
+    border-color: #28a745;
+    color: var(--color-blanco);
+}
+
+.opcion-btn.incorrecta {
+    background: #dc3545;
+    border-color: #dc3545;
+    color: var(--color-blanco);
+}
+
+.opcion-btn.deshabilitada {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.trivia-feedback {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: none;
+}
+
+.trivia-feedback.mostrar {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.trivia-feedback.correcta {
+    background: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+    border: 2px solid #28a745;
+}
+
+.trivia-feedback.incorrecta {
+    background: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+    border: 2px solid #dc3545;
+}
+
+.trivia-controls {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-trivia {
+    background: var(--color-coca-cola);
+    color: var(--color-blanco);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transicion);
+    margin: 0 0.5rem;
+}
+
+.btn-trivia:hover {
+    background: #C4161D;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-neon);
+}
+
+.trivia-resultado {
+    text-align: center;
+    background: var(--color-gris-medio);
+    border: 2px solid var(--color-coca-cola);
+    border-radius: 12px;
+    padding: 3rem;
+    margin-top: 2rem;
+}
+
+.trivia-resultado h3 {
+    color: var(--color-coca-cola);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.resultado-puntaje {
+    font-size: 1.5rem;
+    color: var(--color-blanco);
+    margin-bottom: 1rem;
+}
+
+.resultado-puntaje span {
+    color: var(--color-coca-cola);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.resultado-mensaje {
+    color: var(--color-gris);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Recursos - Fuentes */
+.recursos {
+    padding-top: 10rem;
+}
+
+.fuentes-lista {
+    margin-top: 2rem;
+}
+
+.fuente-item {
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-coca-cola);
+}
+
+.fuente-item p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.imagenes-sugerencias {
+    margin-top: 2rem;
+}
+
+.sugerencia-item {
+    background: var(--color-gris-medio);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-coca-cola);
+}
+
+.sugerencia-item h4 {
+    color: var(--color-coca-cola);
+    margin-bottom: 0.5rem;
+}
+
+.sugerencia-item p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+}
+
+.sugerencia-item strong {
+    color: var(--color-blanco);
+}
+
+/* Botón Flotante */
+.btn-flotante {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: transparent;
+    color: var(--color-blanco);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transicion);
+    z-index: 999;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: visible;
+}
+
+.btn-flotante-lata {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: var(--transicion);
+    pointer-events: none;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    /* Eliminar fondo blanco usando mix-blend-mode */
+    mix-blend-mode: multiply;
+    /* Alternativa: usar filter para hacer transparente el blanco */
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* Si la imagen tiene fondo blanco, intentar eliminarlo */
+.btn-flotante-lata[src*="ALT"] {
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3)) contrast(1.2);
+}
+
+/* Si la imagen tiene fondo blanco, usar mix-blend-mode para eliminarlo */
+.btn-flotante:hover {
+    transform: scale(1.1);
+}
+
+.btn-flotante:hover .btn-flotante-lata {
+    filter: drop-shadow(0 0 20px rgba(228, 28, 35, 0.8)) brightness(1.1);
+}
+
+.btn-flotante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(228, 28, 35, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sala-titulo {
+        font-size: 2rem;
+    }
+
+    .sala-subtitulo {
+        font-size: 1rem;
+    }
+
+    .main-nav {
+        padding: 1.5rem 1rem;
+        min-height: 80px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .logo-header {
+        height: 50px;
+        max-width: 200px;
+    }
+
+    .museum-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .nav-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btn-nav {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .sala {
+        padding: 10rem 1rem 3rem;
+    }
+
+    .salas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        flex-direction: row !important;
+        padding-left: 60px;
+    }
+
+    .timeline-content {
+        margin: 0;
+    }
+
+    .navegacion-sala {
+        flex-direction: column;
+    }
+
+    .btn-nav-sala {
+        max-width: 100%;
+    }
+
+    .flujograma-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .flujo-paso {
+        min-height: 180px;
+        padding: 1.5rem;
+    }
+
+    .diagrama-proceso {
+        flex-direction: column;
+    }
+
+    .diagrama-flecha {
+        transform: rotate(90deg);
+    }
+
+    .frase-impactante blockquote {
+        font-size: 1.3rem;
+        padding-left: 1rem;
+    }
+
+    .btn-flotante {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sala-titulo {
+        font-size: 1.5rem;
+    }
+
+    .exhibicion-panel {
+        padding: 1.5rem;
+    }
+
+    .exhibicion-panel h3 {
+        font-size: 1.5rem;
+    }
+
+    .flujograma-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .flujo-paso {
+        min-height: 150px;
+        padding: 1.2rem;
+    }
+
+    .proceso-grid,
+    .talento-grid,
+    .tecnologias-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Utilidades */
+.intro-texto {
+    font-size: 1.1rem;
+    color: var(--color-gris);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Animaciones adicionales */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
